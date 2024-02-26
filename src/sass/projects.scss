@@ -1,0 +1,87 @@
+// @import './variables.scss';
+// لأننا استدعينا هذا الملف في ملف style.scss  
+// لكن بشرط أن يكون استدعاؤه هناك قبل استدعاء هذا الملف
+
+.banner {
+    #banner-img {
+        background-image: url('../images/projects-banner.jpg');
+        height: 250px;
+        background-position: 50% 10%;
+        background-repeat: no-repeat;
+
+        .overlay {
+            background-color: rgba(65, 155, 155, 0.5);
+            position: relative;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .title1 {
+                font-weight: bold;
+                color: white;
+            }
+        }
+    }
+}
+
+.our-works {
+    .custom-btn2 {
+        color: #363636;
+        background-color: white;
+        border: none;
+        border-radius: 1px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: $main-color;
+        }
+    }
+}
+
+.project-details2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.btn,
+button {
+
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+#image-gallery {
+    .modal-footer {
+        display: block;
+    }
+}
+
+.thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.project-details{
+    .card{
+        .card-body{
+            .card-title{
+                color: $main-color;
+                font-weight: 800;
+            }
+        }
+    }
+}

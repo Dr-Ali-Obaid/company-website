@@ -1,0 +1,407 @@
+@import './variables.scss';
+@import './projects.scss';
+@import './blog.scss';
+@import './about.scss';
+@import './contact.scss';
+
+
+@font-face {
+    font-family: 'cairo';
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body {
+    font-family: cairo, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+        overflow-x: hidden;
+    }
+}
+
+.top-menu {
+    .navbar {
+        font-weight: bold;
+        background-color: #fff !important;
+        padding: 0px 100px !important;
+
+        .navbar-nav {
+            li>a {
+                transition-property: background-color;
+                transition-duration: 0.5s;
+
+                &:hover {
+                    color: $main-color;
+                    background-color: $custom-color;
+                    border-bottom: 1px solid $main-color ;
+                }
+            }
+            a.active{
+                color: $main-color;
+                border-bottom: 1px solid $main-color;
+            }
+        }
+    }
+}
+
+.carousel-top {
+    .carousel {
+        .carousel-item {
+            img {
+                height: 450px;
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: rgba(65, 155, 155, 0.5);
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                display: flex !important;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+            }
+
+            .carousel-caption {
+                h1 {
+                    font-weight: bold;
+                    color: white;
+                    margin-bottom: 50px;
+                }
+
+                h4 {
+                    width: 60%;
+                    color: $custom-color;
+                }
+            }
+        }
+
+        .carousel-indicators {
+            button {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 20px 5px 0px 0px;
+
+                &.active {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    color: $main-color !important;
+    font-weight: bold !important;
+    border: 1px solid $main-color !important;
+    
+    transition: all 0.5s ease;
+
+    &:hover,
+    &:focus {
+        color: $custom-color !important;
+        background-color: $main-color !important;
+        border: 1px solid $custom-color !important;
+    }
+}
+
+.who-are-we {
+    .custom-pragragh {
+        line-height: 2em;
+
+        .company-name {
+            color: $main-color;
+        }
+    }
+
+}
+
+.custom-btn-main {
+    padding: 20px;
+    background-color: $main-color !important;
+    color: white;
+    font-weight: bold;
+    width: 250px;
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.latest-projects {
+    background-color: #ffffcc;
+
+    #latest-company-projects {
+        width: 90%;
+
+        .thumbnail2 {
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+
+            .caption2 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: rgba(65, 155, 155, 0.5);
+                max-width: 100%;
+                height: 100%;
+                padding: 2%;
+                text-align: center;
+                color: #fff !important;
+                display: none;
+
+
+            }
+
+            .project-catagory {
+                position: absolute;
+                right: 0;
+                top: 5%;
+                padding: 10px;
+                font-weight: bold;
+                background-color: rgba(240, 240, 240, 0.75);
+                border-top-left-radius: 10%;
+                border-bottom-left-radius: 10%;
+                box-shadow: 0px 5px 20px 0px #202020;
+            }
+        }
+
+        .carousel-control-prev {
+            position: absolute;
+            right: -3%;
+            color: #252222;
+            width: 0;
+
+        }
+
+        .carousel-control-next {
+            position: absolute;
+            left: -3%;
+            color: #252222;
+            width: 0;
+
+        }
+    }
+}
+
+
+
+
+.said-about-company {
+    .custom-img {
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .custom-pragragh {
+        line-height: 2em;
+    }
+
+    .carousel-control-prev {
+        position: absolute;
+        right: 7%;
+        color: #252222;
+        width: 0;
+
+    }
+
+    .carousel-control-next {
+        position: absolute;
+        left: 7%;
+        color: #252222;
+        width: 0;
+
+    }
+}
+
+.clients {
+    background-color: #419b9b;
+}
+
+.latest-posts {
+    .card-body {
+        width: 90%;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        background-color: white;
+        position: relative;
+        top: -17px;
+        left: -5%;
+
+        .card-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+}
+
+footer {
+    height: 450px;
+    background-color: #393939;
+
+    h2 {
+        color: $custom-color;
+        font-size: 150%;
+    }
+
+    .line1 {
+        width: 5%;
+        border-top: 3px solid $custom-color ;
+        margin: auto;
+
+    }
+
+    #footer-nav-links {
+        a {
+            text-decoration: none;
+            color: #bbb;
+            margin-left: 15px;
+            font-size: 90%;
+
+            &:hover,
+            &:focus {
+                color: $custom-color;
+            }
+
+        }
+
+    }
+
+    .line2 {
+        width: 60%;
+        border-top: 3px solid $custom-color;
+        margin: 10px auto 10px;
+    }
+
+    .form {
+
+        .input-group {
+            width: 30%;
+
+            input {
+                background-color: #202020;
+                border-radius: 1px !important;
+                border: 0;
+                color: $custom-color;
+
+                &:focus {
+                    border-color: $custom-color;
+                    box-shadow: 0 0 2px 0 $custom-color ;
+                    background-color: #202020;
+                    color: $custom-color;
+                }
+
+                &::placeholder {
+                    color: $custom-color;
+                    text-align: right;
+                }
+            }
+
+            .btn-light {
+                border-radius: 1px;
+
+                &:hover,
+                &:focus {
+                    color: $custom-color !important;
+                    background-color: #363636 !important;
+                    border: 1px solid $custom-color;
+                    transition-property: color, background-color, border;
+                    transition-duration: 0.5s;
+                }
+            }
+
+        }
+    }
+
+    .copyright {
+        color: #969696;
+        font-size: 90%;
+        font-weight: bold;
+    }
+
+    .copyright-link {
+        text-decoration: none !important;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $custom-color;
+        }
+    }
+}
+
+
+@media (max-width: 1199px) and (min-width: 992px) {
+
+    .project-details {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .top-menu {
+        .navbar {
+            padding: 0px 20px !important;
+
+            .navbar-nav {
+                li>a {
+
+                    border-bottom: none !important;
+                    padding-right: 5px;
+
+                }
+            }
+        }
+    }
+    footer {
+        .form {
+            .input-group {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-top {
+        .carousel {
+            .carousel-caption {
+                h1 {
+                    font-size: 30px;
+                }
+
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    footer {
+        .form {
+            .input-group {
+                width: 60%;
+            }
+        }
+    }
+    
+}
