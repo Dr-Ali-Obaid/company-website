@@ -77,22 +77,33 @@ $(function () {
                 updateGallery($(this));
             });
     }
-    var pathname = window.location.pathname;
-console.log(pathname);
-$(`.navbar-nav > li > a[href="${pathname}"]`).addClass('active');
-if(pathname === '/blog-details.html' || pathname ==='/add-blog.html'){
-    $(`.navbar-nav > li > a[href="/blog.html"]`).addClass('active');
-};
-if(pathname == '/poject-details.html'){
-    $(`.navbar-nav > li > a[href="/projects.html"]`).addClass('active')
-};
+
 
 
 
 });
 
 
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('nav a').forEach(item =>{
+        if (item.href == window.location.href){
+            item.classList.add('active')
+        }
+    })
+   
+        if (window.location.href.includes ('blog-details.html') || window.location.href.includes ('add-blog.html')){
+            $(`nav a[href="blog.html"]`).addClass('active')
+        }
+        if(window.location.href.includes ('poject-details.html')){
+            $(`nav a[href = "projects.html"]`).addClass('active')
+        }
+})
+
 var year = new Date().getFullYear();
 document.getElementById('date').innerHTML = year;
 
+
+if (window.location.href.includes('blog-details')) {
+    $('navbar-nav > li > a[href="blog.html"]').addClass('active')
+}
 
